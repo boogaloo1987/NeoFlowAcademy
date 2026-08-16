@@ -16,6 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const isEnglish = document.documentElement.lang === "en";
+  const teaserLabels = isEnglish
+    ? { show: "Watch the teaser", hide: "Hide the teaser", title: "Video teaser" }
+    : { show: "Voir le teaser", hide: "Masquer le teaser", title: "Teaser vidéo" };
+
   document.querySelectorAll(".teaser-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const videoId = btn.dataset.youtube;
@@ -23,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!videoId || !container) return;
 
       if (container.hidden) {
-        container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="Teaser vidéo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+        container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="${teaserLabels.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
         container.hidden = false;
-        btn.textContent = "Masquer le teaser";
+        btn.textContent = teaserLabels.hide;
       } else {
         container.hidden = true;
         container.innerHTML = "";
-        btn.textContent = "Voir le teaser";
+        btn.textContent = teaserLabels.show;
       }
     });
   });
