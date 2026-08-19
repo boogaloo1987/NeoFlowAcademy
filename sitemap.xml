@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://neoflowacademy.com/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/index.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/a-propos.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/a-propos.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/creations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/creations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/creations.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/creations.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/formation.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/formation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/training.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/formation.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/galerie.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/galerie.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/galerie.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/demandes.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/demandes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/requests.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/demandes.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/index.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/a-propos.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/creations.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/creations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/creations.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/creations.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/training.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/formation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/training.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/formation.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/galerie.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/gallery.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/galerie.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/requests.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/demandes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/requests.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/demandes.html" />
+  </url>
+
+</urlset>
