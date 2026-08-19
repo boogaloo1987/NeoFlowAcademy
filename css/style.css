@@ -1,12 +1,15 @@
 /* ===== Variables ===== */
 :root {
   --bg: #0f0f10;
-  --bg-alt: #17171a;
+  --bg-alt: #1e1c1a;
   --text: #f2f0ec;
   --text-muted: #b4b0a8;
   --accent: #a3121f;
   --accent-hover: #c81a2a;
-  --border: #2a2a2d;
+  --accent-bright: #e15951;
+  --accent-signature: #c9a44c;
+  --border: #2f2b27;
+  --radius: 3px;
 
   --font-display: "Bebas Neue", "Archivo Black", "Arial Narrow", sans-serif;
   --font-body: "Inter", "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -64,7 +67,7 @@ p { margin: 0 0 1em; }
 .eyebrow {
   display: inline-block;
   font-family: var(--font-display);
-  color: var(--accent);
+  color: var(--accent-bright);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.95rem;
@@ -117,7 +120,7 @@ p { margin: 0 0 1em; }
 .nav-links a:hover,
 .nav-links a.active {
   border-color: var(--accent);
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 .nav-toggle {
@@ -157,6 +160,7 @@ p { margin: 0 0 1em; }
   display: inline-block;
   padding: 14px 32px;
   border: 1px solid var(--accent);
+  border-radius: var(--radius);
   color: var(--text);
   font-family: var(--font-display);
   letter-spacing: 0.08em;
@@ -306,6 +310,7 @@ p { margin: 0 0 1em; }
 
 .creation-card {
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: var(--bg-alt);
   padding: 36px;
 }
@@ -353,7 +358,7 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 0.85rem;
-  color: var(--accent);
+  color: var(--accent-bright);
   list-style: none;
 }
 
@@ -417,6 +422,7 @@ p { margin: 0 0 1em; }
 
 .timeline-card {
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 28px 32px;
 }
 
@@ -436,7 +442,7 @@ p { margin: 0 0 1em; }
 
 .timeline-year {
   font-family: var(--font-display);
-  color: var(--accent);
+  color: var(--accent-bright);
   letter-spacing: 0.06em;
   font-size: 1rem;
   white-space: nowrap;
@@ -464,6 +470,7 @@ p { margin: 0 0 1em; }
 
 .activity-card {
   border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 32px 28px;
   text-align: center;
 }
@@ -497,6 +504,7 @@ p { margin: 0 0 1em; }
 /* ===== Bloc mis en avant (ex. Masterclass) ===== */
 .highlight-card {
   border: 1px solid var(--accent);
+  border-radius: var(--radius);
   background: var(--bg-alt);
   padding: 36px;
   margin-top: 2.5em;
@@ -510,6 +518,7 @@ p { margin: 0 0 1em; }
 /* ===== Placeholder blocks (pages en construction) ===== */
 .placeholder-box {
   border: 1px dashed var(--border);
+  border-radius: var(--radius);
   padding: 48px 32px;
   text-align: center;
   color: var(--text-muted);
@@ -518,7 +527,15 @@ p { margin: 0 0 1em; }
 }
 
 .placeholder-box .eyebrow {
-  color: var(--accent);
+  color: var(--accent-bright);
+}
+
+.placeholder-box.signature-tier {
+  border-color: var(--accent-signature);
+}
+
+.placeholder-box.signature-tier .eyebrow {
+  color: var(--accent-signature);
 }
 
 /* ===== Footer ===== */
@@ -541,7 +558,7 @@ p { margin: 0 0 1em; }
 }
 
 .footer-social a:hover {
-  color: var(--accent);
+  color: var(--accent-bright);
 }
 
 /* ===== Responsive ===== */
