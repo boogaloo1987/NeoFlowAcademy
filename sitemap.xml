@@ -86,4 +86,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/demandes.html" />
   </url>
 
+  <url>
+    <loc>https://neoflowacademy.com/confidentialite.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/confidentialite.html" />
+  </url>
+
+  <url>
+    <loc>https://neoflowacademy.com/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoflowacademy.com/confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoflowacademy.com/en/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoflowacademy.com/confidentialite.html" />
+  </url>
+
 </urlset>
