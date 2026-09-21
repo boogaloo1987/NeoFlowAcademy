@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <title>Politique de confidentialité — NeoFlow Academy</title>
-<meta name="description" content="Politique de confidentialité de NeoFlow Academy : données collectées, finalités, sous-traitants et droits RGPD pour l'assistant automatisé WhatsApp.">
+<meta name="description" content="Politique de confidentialité de NeoFlow Academy : données collectées, finalités, sous-traitants et droits RGPD pour l'assistant automatisé WhatsApp et le chatbot du site.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
@@ -54,7 +54,7 @@
     <div class="container">
       <span class="eyebrow">Confidentialité</span>
       <h1>Politique de confidentialité — NeoFlow Academy</h1>
-      <p class="prose">Dernière mise à jour : 18 septembre 2026</p>
+      <p class="prose">Dernière mise à jour : 21 septembre 2026</p>
 
       <div class="prose">
         <h3>1. Qui sommes-nous</h3>
@@ -81,7 +81,7 @@
         <ul>
           <li>Meta / WhatsApp Business Platform (réception et envoi des messages).</li>
           <li>Google (Gmail, Google Calendar), avec accord préalable pour les actions d'envoi.</li>
-          <li>Un prestataire d'intelligence artificielle (traitement du langage pour générer les réponses).</li>
+          <li>Des prestataires d'intelligence artificielle (OpenAI et Anthropic : traitement du langage et transcription pour générer les réponses).</li>
           <li>Un hébergeur d'automatisation (infrastructure n8n, hébergée chez OVHcloud, France).</li>
         </ul>
 
@@ -93,6 +93,19 @@
 
         <h3>7. Sécurité</h3>
         <p>Des mesures raisonnables sont mises en œuvre pour protéger les données contre tout accès non autorisé.</p>
+
+        <h3>8. Chatbot du site neoflowacademy.com</h3>
+        <p>Le site propose un assistant virtuel (chatbot). Il est indépendant de l'assistant personnel WhatsApp décrit ci-dessus.</p>
+        <ul>
+          <li><strong>Données traitées :</strong> les messages que vous saisissez dans le chatbot et les réponses générées ; si vous demandez à contacter Régis, les informations que vous fournissez (nom, moyen de contact, message) ; un identifiant de session technique généré pour la conversation.</li>
+          <li><strong>Finalité :</strong> répondre à vos questions sur NeoFlow Academy et, à votre demande, transmettre votre message à Régis afin qu'il puisse vous répondre.</li>
+          <li><strong>Traitement :</strong> vos messages sont traités par n8n (hébergé chez OVHcloud, France) et transmis à Anthropic (modèle Claude) via son API afin de générer les réponses. Anthropic applique ses propres conditions : <a href="https://www.anthropic.com/legal/privacy" style="text-decoration: underline;" rel="noopener">anthropic.com/legal/privacy</a>.</li>
+          <li><strong>Messages transmis à Régis :</strong> ils sont enregistrés dans une base de données sur le serveur n8n et notifiés à Régis par WhatsApp (Meta). Aucune suppression automatique n'est configurée à ce jour ; vous pouvez demander la suppression de votre message à l'adresse de contact.</li>
+          <li><strong>Historique technique :</strong> le serveur n8n conserve un historique technique d'exécution qui peut contenir le texte des échanges.</li>
+          <li><strong>Séparation des données :</strong> le chatbot n'a accès à aucun outil ni à aucune donnée privée de Régis (e-mails, agenda, conversations WhatsApp). Chaque visiteur dispose d'une conversation distincte : le chatbot ne donne pas accès aux échanges des autres visiteurs.</li>
+          <li><strong>Service tiers :</strong> l'affichage du chatbot charge des fichiers depuis le réseau de diffusion jsDelivr (cdn.jsdelivr.net), qui reçoit votre adresse IP à cette occasion.</li>
+        </ul>
+        <p>Nous vous recommandons de ne pas saisir d'informations sensibles dans le chatbot.</p>
       </div>
     </div>
   </section>
@@ -109,5 +122,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/chatbot.js" defer></script>
 </body>
 </html>

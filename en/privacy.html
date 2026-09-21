@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
 <title>Privacy Policy — NeoFlow Academy</title>
-<meta name="description" content="NeoFlow Academy privacy policy: data collected, purposes, processors and GDPR rights for the automated WhatsApp assistant.">
+<meta name="description" content="NeoFlow Academy privacy policy: data collected, purposes, processors and GDPR rights for the automated WhatsApp assistant and the website chatbot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
@@ -54,7 +54,7 @@
     <div class="container">
       <span class="eyebrow">Privacy</span>
       <h1>Privacy Policy — NeoFlow Academy</h1>
-      <p class="prose">Last updated: September 18, 2026</p>
+      <p class="prose">Last updated: September 21, 2026</p>
 
       <div class="prose">
         <h3>1. Who we are</h3>
@@ -81,7 +81,7 @@
         <ul>
           <li>Meta / WhatsApp Business Platform (receiving and sending messages).</li>
           <li>Google (Gmail, Google Calendar), with prior agreement for sending actions.</li>
-          <li>An artificial intelligence provider (language processing to generate responses).</li>
+          <li>Artificial intelligence providers (OpenAI and Anthropic: language processing and transcription to generate responses).</li>
           <li>An automation host (n8n infrastructure, hosted by OVHcloud, France).</li>
         </ul>
 
@@ -93,6 +93,19 @@
 
         <h3>7. Security</h3>
         <p>Reasonable measures are implemented to protect data against unauthorized access.</p>
+
+        <h3>8. Website chatbot (neoflowacademy.com)</h3>
+        <p>The website offers a virtual assistant (chatbot). It is separate from the personal WhatsApp assistant described above.</p>
+        <ul>
+          <li><strong>Data processed:</strong> the messages you type into the chatbot and the generated replies; if you ask to contact Régis, the information you provide (name, contact details, message); a technical session identifier generated for the conversation.</li>
+          <li><strong>Purpose:</strong> to answer your questions about NeoFlow Academy and, at your request, to pass your message on to Régis so that he can reply.</li>
+          <li><strong>Processing:</strong> your messages are processed by n8n (hosted by OVHcloud, France) and sent to Anthropic (Claude model) through its API to generate the replies. Anthropic applies its own terms: <a href="https://www.anthropic.com/legal/privacy" style="text-decoration: underline;" rel="noopener">anthropic.com/legal/privacy</a>.</li>
+          <li><strong>Messages passed on to Régis:</strong> they are stored in a database on the n8n server and Régis is notified through WhatsApp (Meta). No automatic deletion is configured at this time; you may request deletion of your message at the contact address.</li>
+          <li><strong>Technical history:</strong> the n8n server keeps a technical execution history that may contain the text of the exchanges.</li>
+          <li><strong>Separation of data:</strong> the chatbot has no access to any of Régis's private tools or data (emails, calendar, WhatsApp conversations). Each visitor has a separate conversation: the chatbot does not give access to other visitors' exchanges.</li>
+          <li><strong>Third-party service:</strong> displaying the chatbot loads files from the jsDelivr content delivery network (cdn.jsdelivr.net), which receives your IP address when you visit.</li>
+        </ul>
+        <p>We recommend that you do not enter sensitive information in the chatbot.</p>
       </div>
     </div>
   </section>
@@ -109,5 +122,6 @@
 </footer>
 
 <script src="../js/main.js"></script>
+<script src="../js/chatbot.js" defer></script>
 </body>
 </html>
