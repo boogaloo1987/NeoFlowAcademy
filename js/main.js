@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!videoId || !container) return;
 
       if (container.hidden) {
-        container.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" title="${teaserLabels.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+        container.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${teaserLabels.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
         container.hidden = false;
         btn.textContent = teaserLabels.hide;
       } else {
@@ -36,6 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = "";
         btn.textContent = teaserLabels.show;
       }
+    });
+  });
+
+  // Cartes vidéo : la vignette est remplacée par le lecteur au clic (rien n'est chargé depuis YouTube avant).
+  document.querySelectorAll(".video-card[data-youtube]").forEach((card) => {
+    card.addEventListener("click", () => {
+      if (card.classList.contains("playing")) return;
+      const frame = card.querySelector(".video-frame");
+      const title = card.querySelector(".video-title")?.textContent || teaserLabels.title;
+      frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${card.dataset.youtube}?autoplay=1&rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+      card.classList.add("playing");
     });
   });
 });
