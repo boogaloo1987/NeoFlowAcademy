@@ -36,10 +36,10 @@
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="creations.html" class="active">Créations &amp; Parcours</a></li>
-      <li><a href="formation.html">Formation du danseur</a></li>
+      <li><a href="creations.html" class="active">Spectacles</a></li>
+      <li><a href="formation.html">NeoFlowAcademy</a></li>
       <li><a href="galerie.html">Galerie</a></li>
-      <li><a href="demandes.html">Demandes</a></li>
+      <li><a href="demandes.html">Collaborations</a></li>
       <li class="lang-switch">
         <a href="creations.html" class="active" aria-current="page">FR</a>
         <span class="lang-sep" aria-hidden="true">|</span>
@@ -50,14 +50,16 @@
 </header>
 
 <main>
-  <section class="section" style="padding-top: 60px;">
-    <div class="container">
+  <section class="hero hero-video">
+    <video id="fond-video" autoplay muted loop playsinline preload="auto" poster="images/web/fond-spectacles.jpg" aria-hidden="true">
+      <source src="videos/fond-spectacles.mp4" type="video/mp4">
+    </video>
+    <div class="hero-inner">
       <span class="eyebrow">Portfolio</span>
       <h1>Créations &amp; Parcours</h1>
-      <p class="prose">Mes créations en tant que chorégraphe, et mon parcours en tant que danseur-interprète auprès de compagnies et chorégraphes en France et à l'international.</p>
-
-      <img class="creation-visual" src="images/948F7BA5-5F9F-4298-9BF7-E69458698CD1.JPG" alt="Regis Tsoumbou bakana en représentation sur scène">
+      <p class="lead">Mes créations en tant que chorégraphe, et mon parcours en tant que danseur-interprète auprès de compagnies et chorégraphes en France et à l'international.</p>
     </div>
+    <button class="video-pause" type="button" id="video-pause" aria-pressed="false">Pause</button>
   </section>
 
   <section class="section section-alt">
@@ -78,6 +80,7 @@
             <strong>Chorégraphie :</strong> Régis Tsoumbou Bakana<br>
             <strong>Interprètes :</strong> Régis Tsoumbou Bakana, Lucie Retail<br>
             <strong>Regards extérieurs :</strong> Sophie Bulbulyan, Babacar Cissé<br>
+            <strong>Musique :</strong> Trifon Koutsourelis<br>
             <strong>Durée :</strong> 45 minutes
           </p>
 
@@ -89,7 +92,10 @@
 
           <p class="creation-meta">
             <strong>Production :</strong> Compagnie DK-BEL<br>
-            <strong>Coproduction :</strong> Le Figuier Blanc — Argenteuil
+            <strong>Coproduction :</strong> Le Figuier Blanc — Argenteuil<br>
+            <strong>Régie générale :</strong> Niko Perret<br>
+            <strong>Aide à la production :</strong> Natalie Racine<br>
+            <strong>Réalisation vidéo :</strong> Vincent Farge
           </p>
 
           <details class="disclosure">
@@ -108,7 +114,7 @@
           </details>
 
           <div class="card-actions">
-            <button class="btn teaser-btn" data-youtube="wjKeTPY-kfA" data-target="video-delaoujesuis">Voir le teaser</button>
+            <button class="btn teaser-btn" data-video="videos/de-la-ou-je-suis-teaser.mp4" data-target="video-delaoujesuis">Voir le teaser</button>
           </div>
           <div id="video-delaoujesuis" class="video-embed" hidden></div>
         </article>
@@ -215,6 +221,10 @@
               <li>Kultur vom Rande Festival — Reutlingen</li>
             </ul>
           </details>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="_FyvFZOH-tA" data-target="video-cestbeau">Voir le teaser</button>
+          </div>
+          <div id="video-cestbeau" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -249,6 +259,10 @@
               <li>L'Arsenal — Metz</li>
             </ul>
           </details>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="CCugVM7_W98" data-target="video-utopia">Voir le teaser</button>
+          </div>
+          <div id="video-utopia" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -269,6 +283,10 @@
           <img class="creation-visual" style="margin: 1em 0 1.5em;" src="images/web/creation-pihpoh.jpg" alt="Regis Tsoumbou bakana en scène dans la création Le joueur de Pih-Poh">
           <p class="timeline-meta">Compagnie DK-BEL — Danseur-interprète</p>
           <p class="timeline-lieux-inline">Hijinx Festival — Millennium Theatre — Cardiff, Pays de Galles · Alles Muss Raus — Theater Festival — Kaiserslautern, Allemagne · Espace Marcel Pagnol — Villiers-le-Bel</p>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="e8Sxm8rcQd0" data-target="video-pihpoh">Voir le teaser</button>
+          </div>
+          <div id="video-pihpoh" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -289,6 +307,10 @@
           <img class="creation-visual" style="margin: 1em 0 1.5em;" src="images/web/creation-cetteterre.jpg" alt="Regis Tsoumbou bakana en scène dans la création Cette terre me murmure à l'oreille">
           <p class="timeline-meta">Compagnie Christiane Emmanuel — Interprète</p>
           <p class="timeline-lieux-inline">Tropiques Atrium — Scène nationale de Martinique</p>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="ZMhIXT-kMjk" data-target="video-cetteterre">Voir le teaser</button>
+          </div>
+          <div id="video-cetteterre" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -308,6 +330,10 @@
           <img class="creation-visual" style="margin: 1em 0 1.5em;" src="images/web/creation-messe.jpg" alt="Regis Tsoumbou bakana en scène dans la création Messe pour le temps présent">
           <p class="timeline-meta">Compagnie Point Zéro — Chorégraphe : Delphine Caron — Interprète</p>
           <p class="timeline-lieux-inline">MPAA La Place · MPAA Odéon</p>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="yLNoLTBUrRE" data-target="video-messe">Voir le teaser</button>
+          </div>
+          <div id="video-messe" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -361,6 +387,10 @@
               </ul>
             </div>
           </details>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="9WkgOqaUtrk" data-target="video-cercleegal">Voir le teaser</button>
+          </div>
+          <div id="video-cercleegal" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -371,6 +401,10 @@
           <img class="creation-visual" style="margin: 1em 0 1.5em;" src="images/web/creation-difekako.jpg" alt="Regis Tsoumbou bakana en scène avec la Compagnie Difé Kako">
           <p class="timeline-meta">Compagnie Difé Kako — Chorégraphe : Chantal Loïal — Interprète</p>
           <p class="timeline-lieux-inline">Maison des Arts de Créteil · Conservatoire du 13e · Théâtre de Savigny-le-Temple</p>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="WQ7VPYCPDds" data-target="video-armesegales">Voir le teaser</button>
+          </div>
+          <div id="video-armesegales" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -380,6 +414,10 @@
           </div>
           <p class="timeline-meta">Compagnie Irène Tassembédo — Chorégraphe : Irène Tassembédo — Danseur-interprète</p>
           <p class="timeline-lieux-inline">Festival International de Danse de Ouagadougou — Maison du Peuple — Burkina Faso · Festival Danse Afrique Dense — Centre de Développement Chorégraphique La Termitière — Burkina Faso · Saint-Pierre-des-Cuisines — Toulouse</p>
+          <div class="card-actions">
+            <button class="btn teaser-btn" data-youtube="7SdjMLKuUTM" data-target="video-kombibisse">Voir le teaser</button>
+          </div>
+          <div id="video-kombibisse" class="video-embed" hidden></div>
         </article>
 
         <article class="timeline-card">
@@ -405,7 +443,7 @@
     <a href="https://www.youtube.com/@registsoumbou" target="_blank" rel="noopener">YouTube</a>
     <a href="https://www.instagram.com/tsoumbou_regis" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.tiktok.com/@lamasterclassdudanseur" target="_blank" rel="noopener">TikTok</a>
-    <a href="demandes.html">Demandes</a>
+    <a href="demandes.html">Collaborations</a>
     <a href="confidentialite.html">Confidentialité</a>
   </div>
   <p>© 2026 Regis Tsoumbou bakana</p>

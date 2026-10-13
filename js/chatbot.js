@@ -30,16 +30,16 @@
     ':root{' +
     '--chat--color-primary:#a3121f;--chat--color-primary-shade-50:#c81a2a;--chat--color-primary-shade-100:#e15951;' +
     '--chat--color-secondary:#c9a44c;--chat--color-secondary-shade-50:#c9a44c;' +
-    '--chat--color-white:#f2f0ec;--chat--color-light:#1e1c1a;--chat--color-light-shade-50:#2f2b27;--chat--color-light-shade-100:#2f2b27;' +
-    '--chat--color-medium:#2f2b27;--chat--color-dark:#0f0f10;--chat--color-disabled:#6b665e;--chat--color-typing:#f2f0ec;' +
+    '--chat--color-white:#ffffff;--chat--color-light:#f4f3f0;--chat--color-light-shade-50:#e3e0da;--chat--color-light-shade-100:#e3e0da;' +
+    '--chat--color-medium:#e3e0da;--chat--color-dark:#161514;--chat--color-disabled:#8a857d;--chat--color-typing:#161514;' +
     '--chat--font-family:"Inter","Work Sans",-apple-system,BlinkMacSystemFont,sans-serif;' +
-    '--chat--toggle--background:#a3121f;--chat--toggle--hover--background:#c81a2a;--chat--toggle--active--background:#c81a2a;--chat--toggle--color:#f2f0ec;' +
+    '--chat--toggle--background:#a3121f;--chat--toggle--hover--background:#c81a2a;--chat--toggle--active--background:#c81a2a;--chat--toggle--color:#ffffff;' +
     '--chat--window--width:380px;--chat--window--height:560px;--chat--border-radius:3px;' +
-    '--chat--header--background:#0f0f10;--chat--header--color:#f2f0ec;' +
-    '--chat--message--bot--background:#1e1c1a;--chat--message--bot--color:#f2f0ec;' +
-    '--chat--message--user--background:#a3121f;--chat--message--user--color:#f2f0ec;' +
-    '--chat--body--background:#0f0f10;--chat--footer--background:#1e1c1a;--chat--footer--color:#f2f0ec;' +
-    '--chat--input--background:#0f0f10;--chat--input--text-color:#f2f0ec;--chat--input--border:1px solid #2f2b27;--chat--input--send--button--color:#e15951;' +
+    '--chat--header--background:#a3121f;--chat--header--color:#ffffff;' +
+    '--chat--message--bot--background:#f4f3f0;--chat--message--bot--color:#161514;' +
+    '--chat--message--user--background:#a3121f;--chat--message--user--color:#ffffff;' +
+    '--chat--body--background:#ffffff;--chat--footer--background:#f4f3f0;--chat--footer--color:#161514;' +
+    '--chat--input--background:#ffffff;--chat--input--text-color:#161514;--chat--input--border:1px solid #e3e0da;--chat--input--send--button--color:#a3121f;' +
     '--chat--header--border-bottom:1px solid #2f2b27;--chat--message--bot--border:1px solid #2f2b27;' +
     '}';
   document.head.appendChild(style);

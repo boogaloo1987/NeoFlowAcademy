@@ -53,10 +53,10 @@
     <ul class="nav-links">
       <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="creations.html">Créations &amp; Parcours</a></li>
-      <li><a href="formation.html">Formation du danseur</a></li>
+      <li><a href="creations.html">Spectacles</a></li>
+      <li><a href="formation.html">NeoFlowAcademy</a></li>
       <li><a href="galerie.html">Galerie</a></li>
-      <li><a href="demandes.html">Demandes</a></li>
+      <li><a href="demandes.html">Collaborations</a></li>
       <li class="lang-switch">
         <a href="index.html" class="active" aria-current="page">FR</a>
         <span class="lang-sep" aria-hidden="true">|</span>
@@ -67,101 +67,49 @@
 </header>
 
 <main>
-  <section class="hero hero-photo">
+  <section class="hero hero-video">
+    <!-- Boucle muette tirée du teaser « De là où je suis » (2026) ; à remplacer par la vidéo de présentation de Régis -->
+    <video id="fond-video" autoplay muted loop playsinline preload="auto" poster="images/web/fond-accueil.jpg" aria-hidden="true">
+      <source src="videos/fond-accueil.mp4" type="video/mp4">
+    </video>
     <div class="hero-inner">
       <span class="eyebrow">Danse contemporaine · Hip-hop</span>
       <h1>Regis Tsoumbou bakana</h1>
-      <p class="lead">Danseur, chorégraphe et professeur de danse, à la croisée du hip-hop et de la danse contemporaine.</p>
+      <p class="lead">Danseur et chorégraphe, à la croisée du hip-hop et de la danse contemporaine.</p>
       <div class="hero-actions">
-        <a href="creations.html" class="btn btn-solid">Voir les créations</a>
-        <a href="demandes.html" class="btn">Demandes</a>
+        <a href="#decouvrir" class="btn btn-solid">Découvrir</a>
       </div>
     </div>
+    <button class="video-pause" type="button" id="video-pause" aria-pressed="false">Pause</button>
   </section>
 
-  <section class="section section-teaser">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Création 2026 · Compagnie DK-BEL</span>
-        <h2>De là où je suis</h2>
-      </div>
-      <div class="video-feature">
-          <button class="video-card" type="button" data-youtube="wjKeTPY-kfA" aria-label="Lire le teaser : De là où je suis">
-            <span class="video-frame"><img src="images/web/teaser-delaoujesuis.jpg" alt="" loading="lazy" decoding="async"><span class="play" aria-hidden="true"></span></span>
-            <span class="video-title">De là où je suis</span>
-          </button>
-      </div>
-      <div class="card-actions" style="justify-content: center; margin-top: 2em;">
-        <a href="creations.html" class="btn btn-solid">Toutes les créations</a>
-        <a href="demandes.html" class="btn">Programmer ce spectacle</a>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">NeoFlowAcademy</span>
-        <h2>De la scène à la transmission</h2>
-      </div>
-      <div class="prose" style="margin: 0 auto; text-align: center;">
-        <p>NeoFlowAcademy est la méthode de transmission de Régis Tsoumbou bakana : une approche née de son parcours artistique et pensée pour accompagner les danseurs dans leur progression, leur expression et leur création.</p>
-      </div>
-      <div class="card-actions" style="justify-content: center; margin-top: 2em;">
-        <a href="formation.html" class="btn btn-solid">Découvrir NeoFlowAcademy</a>
+  <section class="section" id="decouvrir">
+    <div class="presentation">
+      <img src="images/web/portrait-a-propos.jpg" alt="Portrait de Regis Tsoumbou bakana" loading="lazy">
+      <div>
+        <h2>Du hip-hop à la scène contemporaine</h2>
+        <div class="prose">
+          <p>Danseur, chorégraphe et professeur, Régis Tsoumbou bakana découvre le hip-hop en 2008 au Gabon, dans les battles et les street events de son quartier.</p>
+          <p>Formé à l'École de Danse Afro-Contemporaine Irène Tassembedo (EDIT) à Ouagadougou, puis à l'Université Paris 8, il danse en France et à l'international et crée ses propres pièces au sein de la Compagnie DK-BEL.</p>
+        </div>
+        <a href="a-propos.html" class="btn">Lire le parcours complet</a>
       </div>
     </div>
   </section>
 
   <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Trois activités, une même écriture du mouvement</span>
-        <h2>Danseur, chorégraphe, formateur</h2>
-      </div>
-      <div class="activity-grid">
-        <div class="activity-card">
-          <span class="eyebrow">Danseur-interprète</span>
-          <p>Interprète auprès de compagnies et chorégraphes en France et à l'international depuis 2011.</p>
-          <a href="creations.html" class="btn">Voir le parcours</a>
-        </div>
-        <div class="activity-card">
-          <span class="eyebrow">Chorégraphe</span>
-          <p>Auteur de créations à la croisée du hip-hop et de la danse contemporaine, au sein de la Compagnie DK-BEL.</p>
-          <a href="creations.html" class="btn">Voir les créations</a>
-        </div>
-        <div class="activity-card">
-          <span class="eyebrow">Professeur / formateur</span>
-          <p>Transmission par les cours, ateliers et la Masterclass du Danseur.</p>
-          <a href="formation.html" class="btn">Voir la formation</a>
-        </div>
-      </div>
+    <div class="section-header">
+      <h2>Entrer dans mon univers</h2>
+      <p>Des spectacles à voir, une formation pour danser, des projets à imaginer ensemble.</p>
+    </div>
+    <div class="portes">
+      <a class="porte" href="creations.html"><img src="images/web/creation-delaoujesuis.jpg" alt="" loading="lazy"><div class="porte-texte"><h3>Spectacles</h3><p>Mes créations, et mon parcours d'interprète en France et à l'étranger.</p><span class="porte-lien">Découvrir les spectacles</span></div></a>
+      <a class="porte" href="formation.html"><img src="images/web/formation-studio-1.jpg" alt="" loading="lazy"><div class="porte-texte"><h3>NeoFlowAcademy</h3><p>Ma méthode pour gagner en confiance, en expression et en création.</p><span class="porte-lien">Découvrir la formation</span></div></a>
+      <a class="porte" href="demandes.html"><img src="images/web/galerie-duo-1.jpg" alt="" loading="lazy"><div class="porte-texte"><h3>Collaborations</h3><p>Programmation, ateliers, résidences, projets artistiques et presse.</p><span class="porte-lien">Travailler ensemble</span></div></a>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <span class="eyebrow">Parcours</span>
-      <div class="prose">
-        <p>Danseur, chorégraphe et professeur, Régis Tsoumbou bakana découvre le hip-hop en 2008 au Gabon avant de se former à l'École de Danse Afro-Contemporaine Irène Tassembedo (EDIT) à Ouagadougou, où il devient danseur-interprète au sein de la Compagnie Irène Tassembedo. Diplômé de l'EDIT en 2017 et titulaire d'une Licence en danse de l'Université Paris 8 Vincennes-Saint-Denis, il poursuit aujourd'hui une recherche chorégraphique à la croisée du hip-hop et de la danse contemporaine, notamment au sein de la compagnie DK-BEL.</p>
-      </div>
-      <div class="tags">
-        <span class="tag">Danse contemporaine</span>
-        <span class="tag">Hip-hop</span>
-        <span class="tag">Chorégraphe</span>
-        <span class="tag">Professeur de danse</span>
-      </div>
-      <a href="a-propos.html" class="btn">Lire le parcours complet</a>
-
-      <div class="photo-grid">
-        <img src="images/948F7BA5-5F9F-4298-9BF7-E69458698CD1.JPG" alt="Regis Tsoumbou bakana en représentation sur scène">
-        <img src="images/IMG_5738.JPG" alt="Regis Tsoumbou bakana en duo avec un autre danseur">
-        <img src="images/60fea581-8ccf-460d-a44d-bb553afcd95c.JPG" alt="Séance de travail collectif en studio avec un groupe de danseurs">
-        <img src="images/web/portrait-a-propos-secondaire.jpg" alt="Portrait de Regis Tsoumbou bakana">
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
     <div class="section-header">
       <span class="eyebrow">Vision artistique</span>
       <h2>Transmettre, partager, explorer</h2>
@@ -177,7 +125,7 @@
     <a href="https://www.youtube.com/@registsoumbou" target="_blank" rel="noopener">YouTube</a>
     <a href="https://www.instagram.com/tsoumbou_regis" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.tiktok.com/@lamasterclassdudanseur" target="_blank" rel="noopener">TikTok</a>
-    <a href="demandes.html">Demandes</a>
+    <a href="demandes.html">Collaborations</a>
     <a href="confidentialite.html">Confidentialité</a>
   </div>
   <p>© 2026 Regis Tsoumbou bakana</p>

@@ -24,11 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".teaser-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       const videoId = btn.dataset.youtube;
+      const videoSrc = btn.dataset.video;
       const container = document.getElementById(btn.dataset.target);
-      if (!videoId || !container) return;
+      if ((!videoId && !videoSrc) || !container) return;
 
       if (container.hidden) {
-        container.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${teaserLabels.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
+        // data-video : fichier hébergé sur le site ; data-youtube : lecteur YouTube
+        container.innerHTML = videoSrc
+          ? `<video src="${videoSrc}" title="${teaserLabels.title}" controls autoplay playsinline preload="metadata"></video>`
+          : `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${teaserLabels.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>`;
         container.hidden = false;
         btn.textContent = teaserLabels.hide;
       } else {
@@ -40,13 +44,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Cartes vidéo : la vignette est remplacée par le lecteur au clic (rien n'est chargé depuis YouTube avant).
-  document.querySelectorAll(".video-card[data-youtube]").forEach((card) => {
+  document.querySelectorAll(".video-card[data-youtube], .video-card[data-video]").forEach((card) => {
     card.addEventListener("click", () => {
       if (card.classList.contains("playing")) return;
       const frame = card.querySelector(".video-frame");
       const title = card.querySelector(".video-title")?.textContent || teaserLabels.title;
+      if (card.dataset.video) {
+        frame.innerHTML = `<video src="${card.dataset.video}" title="${title}" controls autoplay playsinline></video>`;
+        card.classList.add("playing");
+        return;
+      }
       frame.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${card.dataset.youtube}?autoplay=1&rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       card.classList.add("playing");
     });
   });
+  // Vidéo de fond de l'accueil : bouton Pause/Lecture, et pas de lecture auto si l'utilisateur réduit les animations.
+  const fond = document.getElementById("fond-video");
+  const pause = document.getElementById("video-pause");
+  if (fond && pause) {
+    const labels = isEnglish ? { pause: "Pause", play: "Play" } : { pause: "Pause", play: "Lecture" };
+    const sync = () => {
+      pause.textContent = fond.paused ? labels.play : labels.pause;
+      pause.setAttribute("aria-pressed", String(fond.paused));
+    };
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) fond.pause();
+    pause.addEventListener("click", () => { fond.paused ? fond.play() : fond.pause(); });
+    fond.addEventListener("play", sync);
+    fond.addEventListener("pause", sync);
+    sync();
+  }
 });

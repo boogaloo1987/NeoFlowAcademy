@@ -1,14 +1,15 @@
 /* ===== Variables ===== */
 :root {
-  --bg: #0f0f10;
-  --bg-alt: #1e1c1a;
-  --text: #f2f0ec;
-  --text-muted: #b4b0a8;
+  /* Thème clair (13/10/2026) : fond blanc, mêmes rouge et or que l'ancien thème sombre */
+  --bg: #ffffff;
+  --bg-alt: #f4f3f0;
+  --text: #161514;
+  --text-muted: #5f5b55;
   --accent: #a3121f;
   --accent-hover: #c81a2a;
-  --accent-bright: #e15951;
-  --accent-signature: #c9a44c;
-  --border: #2f2b27;
+  --accent-bright: #a3121f;
+  --accent-signature: #9a7424;
+  --border: #e3e0da;
   --radius: 3px;
 
   --font-display: "Bebas Neue", "Archivo Black", "Arial Narrow", sans-serif;
@@ -79,7 +80,7 @@ p { margin: 0 0 1em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(15, 15, 16, 0.9);
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--border);
 }
 
@@ -186,11 +187,13 @@ p { margin: 0 0 1em; }
 
 .btn:hover {
   background: var(--accent);
+  color: #fff;
 }
 
 .btn-solid {
   background: var(--accent);
   border-color: var(--accent);
+  color: #fff;
 }
 
 .btn-solid:hover {
@@ -208,6 +211,164 @@ p { margin: 0 0 1em; }
   position: relative;
   background-size: cover;
   background-position: center 20%;
+}
+
+/* Accueil : vidéo de danse en fond (le texte reste blanc sur la vidéo) */
+.hero-video {
+  min-height: calc(100vh - 70px);
+  min-height: calc(100svh - 70px);
+  align-items: flex-end;
+  overflow: hidden;
+  color: #fff;
+  border-bottom: 0;
+  background: #000;
+}
+
+.hero-video video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 60%), linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero-video .hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-video .eyebrow {
+  color: #f0d9a0;
+}
+
+.hero.hero-video p.lead {
+  color: #fff;
+}
+
+.hero-video .btn {
+  color: #fff;
+}
+
+.video-pause {
+  position: absolute;
+  z-index: 3;
+  right: 24px;
+  top: 24px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font: 500 0.85rem var(--font-body);
+  cursor: pointer;
+}
+
+/* Trois onglets en avant-goût sur l'accueil */
+.portes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.porte {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #000;
+  color: #fff;
+}
+
+.porte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.porte::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.porte-texte {
+  position: absolute;
+  z-index: 1;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+}
+
+.porte-texte h3 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.porte-texte p {
+  margin: 0.4em 0 0.9em;
+  font-size: 0.98rem;
+}
+
+.porte-lien {
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid var(--accent-hover);
+}
+
+.porte:hover img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.presentation {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.presentation img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 900px) {
+  .portes,
+  .presentation {
+    grid-template-columns: 1fr;
+  }
+
+  .porte {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .porte img {
+    transition: none;
+  }
 }
 
 .hero-photo {
@@ -420,12 +581,22 @@ p { margin: 0 0 1em; }
   background: #000;
 }
 
-.video-embed iframe {
+.video-embed iframe,
+.video-embed video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Teaser hébergé sur le site (balise video) */
+.video-card .video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
 }
 
 /* Timeline — parcours d'interprète */
@@ -546,7 +717,31 @@ p { margin: 0 0 1em; }
   color: var(--accent-bright);
 }
 
-.placeholder-box.signature-tier {
+.placeholder-box.tarifs {
+  list-style: none;
+  padding: 0;
+  margin: 0.4em 0 1.2em;
+}
+
+.tarifs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0.55em 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tarifs li b {
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+.tarif-note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.signature-tier {
   border-color: var(--accent-signature);
 }
 
@@ -675,7 +870,7 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: #000;
-  color: var(--text);
+  color: #fff;
   cursor: pointer;
   overflow: hidden;
   text-align: left;
@@ -727,7 +922,7 @@ p { margin: 0 0 1em; }
   transform: translate(-50%, -50%);
   border-style: solid;
   border-width: 12px 0 12px 20px;
-  border-color: transparent transparent transparent var(--text);
+  border-color: transparent transparent transparent #fff;
 }
 
 .video-card:hover .play,
