@@ -58,6 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
       card.classList.add("playing");
     });
   });
+  // Agenda : une date passée rejoint automatiquement « Déjà joué » (la plus récente en premier)
+  const today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll("#agenda").forEach((section) => {
+    const next = section.querySelector(".agenda:not(.agenda-passe)");
+    const past = section.querySelector(".agenda-passe");
+    if (!next) return;
+    next.querySelectorAll("li[data-date]").forEach((li) => {
+      if (li.dataset.date < today && past) past.prepend(li);
+    });
+    if (!next.children.length) section.querySelector(".agenda-vide")?.removeAttribute("hidden");
+  });
+
   // Vidéo de fond de l'accueil : bouton Pause/Lecture, et pas de lecture auto si l'utilisateur réduit les animations.
   const fond = document.getElementById("fond-video");
   const pause = document.getElementById("video-pause");
