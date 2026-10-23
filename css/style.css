@@ -1029,3 +1029,396 @@ p { margin: 0 0 1em; }
   max-width: 860px;
   margin: 2em auto 0;
 }
+
+/* ===== Parcours : leçon gratuite, masterclass, entrées de l'accueil (21/10/2026) ===== */
+
+/* Bandeau « brouillon » : visible uniquement sur les pages non publiées (à supprimer à la mise en ligne) */
+.draft-banner {
+  background: #161514;
+  color: #f0d9a0;
+  text-align: center;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--accent);
+}
+
+.draft-banner strong {
+  color: #fff;
+}
+
+/* Bandeau de titre sombre, avec un grand mot fantôme en fond */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px 24px 110px;
+  color: #fff;
+  background: radial-gradient(120% 140% at 85% 0%, rgba(163, 18, 31, 0.55) 0%, rgba(163, 18, 31, 0) 55%), linear-gradient(160deg, #1b1a19 0%, #0d0c0c 100%);
+}
+
+.page-hero::after {
+  content: attr(data-ghost);
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.2em;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 28vw, 22rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.045);
+  pointer-events: none;
+}
+
+.page-hero .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .eyebrow {
+  color: #f0d9a0;
+}
+
+.page-hero h1 {
+  color: #fff;
+  max-width: 14em;
+}
+
+.page-hero .lead {
+  max-width: 640px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 1.8em 0 0;
+  padding: 0;
+}
+
+.chips li {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+/* Emplacement de la vidéo : chevauche le bandeau, remplacé par la balise <video> quand le fichier existe */
+.lecon-video-wrap {
+  padding: 0 24px;
+}
+
+.lecon-video {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: -56px auto 0;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lecon-video.vertical {
+  max-width: 380px;
+  aspect-ratio: 9 / 16;
+}
+
+.lecon-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.video-attente {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  background: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0 14px, rgba(255, 255, 255, 0) 14px 28px), radial-gradient(80% 80% at 50% 120%, rgba(163, 18, 31, 0.5) 0%, rgba(163, 18, 31, 0) 70%), #101010;
+}
+
+.video-attente .play-ghost {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+}
+
+.video-attente .play-ghost::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.55);
+}
+
+.video-attente strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.video-attente span {
+  max-width: 420px;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.video-legende {
+  max-width: 900px;
+  margin: 12px auto 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Colonne de lecture */
+.lecon-section {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 64px 24px 0;
+}
+
+.lecon-section .prose {
+  max-width: none;
+}
+
+.lecon-section:last-of-type {
+  padding-bottom: 90px;
+}
+
+/* Étapes numérotées */
+.etapes {
+  counter-reset: etape;
+  list-style: none;
+  display: grid;
+  gap: 18px;
+  margin: 1.5em 0 0;
+  padding: 0;
+}
+
+.etapes li {
+  counter-increment: etape;
+  position: relative;
+  padding: 22px 24px 22px 88px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+
+.etapes li::before {
+  content: counter(etape, decimal-leading-zero);
+  position: absolute;
+  left: 22px;
+  top: 14px;
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.etapes h3 {
+  margin-bottom: 0.3em;
+  font-size: 1.15rem;
+}
+
+.etapes p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.etape-meta {
+  margin-top: 0.6em !important;
+  font-size: 0.85rem;
+}
+
+/* Pause pour essayer : le moment fort de la leçon */
+.pause-essai {
+  margin-top: 2em;
+  padding: 32px 36px;
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  background: #161514;
+  color: #fff;
+}
+
+.pause-essai .eyebrow {
+  color: #f0d9a0;
+}
+
+.pause-essai h3 {
+  color: #fff;
+}
+
+.pause-essai p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Suite du parcours (carte sombre) */
+.suite-cta {
+  padding: 40px 36px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: radial-gradient(90% 120% at 100% 0%, rgba(163, 18, 31, 0.6) 0%, rgba(163, 18, 31, 0) 60%), #161514;
+}
+
+.suite-cta .eyebrow {
+  color: #f0d9a0;
+}
+
+.suite-cta h2,
+.suite-cta h3 {
+  color: #fff;
+}
+
+.suite-cta p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.suite-cta .btn {
+  color: #fff;
+}
+
+.suite-cta .btn:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Étiquettes de statut d'un texte (brouillon seulement) :
+   proposition de Franck / à compléter par Régis. Un texte validé n'a pas d'étiquette. */
+.etiquette {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  vertical-align: middle;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.etiquette-propose {
+  background: #161514;
+  color: #f0d9a0;
+}
+
+.etiquette-completer {
+  border: 1px dashed var(--accent-signature);
+  background: rgba(154, 116, 36, 0.12);
+  color: #6f5518;
+}
+
+.a-completer {
+  padding: 0.1em 0.5em;
+  border: 1px dashed var(--accent-signature);
+  border-radius: 2px;
+  background: rgba(154, 116, 36, 0.08);
+  color: #6f5518;
+}
+
+p.a-completer,
+div.a-completer {
+  display: block;
+  padding: 0.8em 1em;
+}
+
+/* Entrées de l'accueil : « Par où commencer ? » (une carte seule reste centrée) */
+.parcours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 460px));
+  justify-content: center;
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.parcours-carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  padding: 36px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  color: #fff;
+  background: radial-gradient(90% 120% at 100% 0%, rgba(163, 18, 31, 0.6) 0%, rgba(163, 18, 31, 0) 60%), #161514;
+  transition: transform 0.25s ease;
+}
+
+.parcours-carte:hover {
+  transform: translateY(-4px);
+}
+
+.parcours-carte .eyebrow {
+  color: #f0d9a0;
+}
+
+.parcours-carte h3 {
+  margin: 0.1em 0 0.4em;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.parcours-carte p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.parcours-carte .porte-lien {
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 64px 20px 90px;
+  }
+
+  .lecon-section {
+    padding-top: 48px;
+  }
+
+  .etapes li {
+    padding: 18px 18px 18px 70px;
+  }
+
+  .etapes li::before {
+    left: 16px;
+    font-size: 2.3rem;
+  }
+
+  .pause-essai,
+  .suite-cta,
+  .parcours-carte {
+    padding: 26px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parcours-carte {
+    transition: none;
+  }
+
+  .parcours-carte:hover {
+    transform: none;
+  }
+}
